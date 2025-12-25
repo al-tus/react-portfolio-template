@@ -1,0 +1,10 @@
+.container-header h2 {
+    font-size: 48px;
+    letter-spacing: -3px;
+}
+
+.container-header p {
+    max-width: 470px;
+    color: var(--с-subtitle-dark);
+    font-size: 18px;
+}

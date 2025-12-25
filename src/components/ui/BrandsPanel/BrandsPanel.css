@@ -1,0 +1,42 @@
+.brands-panel{
+    width: 100%;
+    margin-top: 70px;
+}
+
+.brands-panel .brands-panel__header{
+    width: max-content;
+    margin: 0 auto 36px;
+}
+.brands-panel .brands-panel__header p{
+    position: relative;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.brands-panel .brands-panel__header p:after,
+.brands-panel .brands-panel__header p:before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.brands-panel .brands-panel__header p:after{
+    right: -90px;
+}
+
+.brands-panel .brands-panel__header p:before{
+    left: -90px;
+}
+
+.brands-panel .brands-panel__body{
+    display: flex;
+    background-color: #222222;
+    padding: 33px 50px;
+    border-radius: 22px;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+svg.color-primary{
+    fill: var(--primary-color);
+}
+
+svg.color-dark {
+    fill: var(--primary-color-dark);
+}

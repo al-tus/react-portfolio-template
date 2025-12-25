@@ -1,0 +1,23 @@
+.btn{
+    font-weight: 500;
+    padding: 0 35px;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+}
+
+.btn--load {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.btn--load svg {
+    transform: rotate(180deg);
+}
+
