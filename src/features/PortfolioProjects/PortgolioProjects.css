@@ -4,3 +4,21 @@
     align-items: center;
     text-align: center;
 }
+
+.portfolio__grid{
+    margin-top: 55px;
+    display: grid;
+    gap: 28px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.portfolio__grid .portfolio__block:nth-child(2n+1){
+    margin-top: 100px;
+}
+
+.portfolio__grid .portfolio__block{
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}

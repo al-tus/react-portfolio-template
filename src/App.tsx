@@ -21,7 +21,7 @@ function App() {
                 />
                 <Benefits />
             </SectionContainer>
-            <SectionContainer className='white'>
+            <SectionContainer className='white pb-0' fullWidth={true}>
                 <PortfolioProjects />
             </SectionContainer>
 

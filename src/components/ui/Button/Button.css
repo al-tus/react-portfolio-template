@@ -6,8 +6,14 @@
 }
 
 .btn--primary {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); ;
+    transition: box-shadow .2s ease;
 }
+
+.btn--primary:hover {
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
 
 .btn--load {
     margin-top: 40px;

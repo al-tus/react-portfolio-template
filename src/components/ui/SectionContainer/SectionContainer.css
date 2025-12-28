@@ -1,13 +1,19 @@
-.section-container:nth-child(n+2) {
+.section-container:not(:first-of-type) {
     padding: 70px 0;
 }
+
 
 .section-container.white {
     background-color: #fff;
     color: #000;
 }
 
+
 .section-container.white .btn--load{
     padding: 20px 30px;
     border: 1px solid var(--primary-color-dark);
+}
+
+.section-container.pb-0{
+    padding-bottom: 0;
 }
