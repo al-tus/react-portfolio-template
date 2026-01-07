@@ -1,0 +1,60 @@
+.goodbye__block{
+    background: #FFF;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(17, 18, 4, 1) 50%);
+}
+
+.goodbye__block .container-fluid {
+    padding: 60px 0;
+    background-color: #1E2008;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 35px;
+}
+
+.goodbye__block .goodbye__section {
+    max-width: 506px;
+    text-align: center;
+    position: relative;
+}
+
+.goodbye__block .container-fluid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(185, 253, 80, 0.2);
+    filter: blur(200px);
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.goodbye__section h2 {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.goodbye__section p {
+    font-size: 18px;
+    max-width: 300px;
+    margin: 29px auto 0;
+}
+
+.goodbye__section button {
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 50px auto 0;
+}
+
+.goodbye__section svg {
+    font-size: 18px;
+}

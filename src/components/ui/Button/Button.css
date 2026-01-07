@@ -27,3 +27,8 @@
     transform: rotate(180deg);
 }
 
+.btn--outline {
+    border: 1px solid var(--primary-color);
+    color: #fff;
+}
+

@@ -18,7 +18,7 @@ const PortfolioProjects: React.FC = () => {
     const portfolioUrls = Object.values(portfolioImg).map((mod) => mod.default);
 
     const chunks = portfolioUrls.reduce<string[][]>((acc, url, i) => {
-        const chunkIndex = Math.floor(i / 3 );
+        const chunkIndex = Math.floor( i / 3 );
         if (!acc[chunkIndex]) {
             acc[chunkIndex] = [];
         }
@@ -29,7 +29,7 @@ const PortfolioProjects: React.FC = () => {
 
     return (
         <div className='portfolio'>
-            <div className="portfolio__header">
+            <div className="section__header">
                 <ContainerHeader
                     title='Our Beautiful Works'
                     subtitle='We help our clients grow their bottom-line with clear and professional websites.'

@@ -6,7 +6,7 @@ header {
     margin: 0 auto 50px;
 }
 
-header .title-logo span{
+.title-logo span{
     color: var(--primary-color);
 }
 

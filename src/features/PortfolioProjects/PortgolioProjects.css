@@ -1,9 +1,3 @@
-.portfolio__header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
 .portfolio__grid{
     margin-top: 55px;

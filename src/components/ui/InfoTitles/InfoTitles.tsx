@@ -1,6 +1,6 @@
 import React from "react";
 import type {InfoTitlesProps} from "./InfoTitles.types.ts";
-import {Button} from "../../components/ui/Button/Button.tsx";
+import {Button} from "../Button/Button.tsx";
 
 import './InfoTitles.css'
 
