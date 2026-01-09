@@ -1,0 +1,45 @@
+.faq-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.faq-container section {
+    max-width: 540px;
+    width: 100%;
+    margin-top: 37px;
+    margin-bottom: 18px;
+}
+
+.faq-container .form-group{
+    width: 100%;
+}
+
+.faq-container textarea {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid #111204;
+    border-radius: 14px;
+    min-height: 132px;
+    resize: none;
+}
+
+.faq-container textarea::placeholder {
+    color: #8D8D8D;
+}
+
+.faq-container .form-footer {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.faq-container .form-footer p {
+    max-width: 242px;
+    color: rgba(17, 18, 4, 0.6);
+}
+
+.faq-container .form-footer button {
+    background-color: var(--primary-color);
+    padding: 0 52px;
+    border-radius: 30px;
+}

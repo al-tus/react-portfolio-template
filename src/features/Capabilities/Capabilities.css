@@ -1,0 +1,15 @@
+.capabilities__tales{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-weight: 300;
+
+}
+
+.capabilities__tales button{
+    padding:11px  35px;
+    font-weight: 300;
+    font-size: 17px;
+}

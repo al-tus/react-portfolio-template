@@ -1,0 +1,28 @@
+.container-header{
+    text-align: center;
+}
+
+.container-header h2 {
+    font-size: 48px;
+    letter-spacing: -3px;
+}
+
+.container-header p {
+    max-width: 470px;
+    color: #fff;
+    font-size: 18px;
+    margin: 25px auto 0;
+}
+
+.section-container.white .container-header p {
+    color: var(--с-subtitle-dark);
+}
+
+.container-header span {
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.section-container.white .container-header span{
+    color: #000;
+}

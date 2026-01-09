@@ -1,0 +1,36 @@
+.info-title{
+    margin-bottom: 100px;
+    margin-top: 123px;
+}
+
+.info-title__grid{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-title .info-title__label{
+    display: block;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+}
+
+.info-title__grid h2{
+    font-size: 54px;
+    line-height: 1.07;
+    letter-spacing: -2px;
+    font-weight: 600;
+}
+
+.info-title__grid .info-title__text{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--с-subtitle);
+    padding-right: 35px;
+    margin-bottom: 35px;
+}
+
+.info-title__grid .btn{
+    padding: 17px 35px;
+}

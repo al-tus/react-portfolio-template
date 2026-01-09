@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    max-width: 1280px;
+    padding: 35px 50px;
+    justify-content: space-between;
+    margin: 0 auto 50px;
+}
+
+.title-logo span{
+    color: var(--primary-color);
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+header button {
+    margin-left: 77px;
+}

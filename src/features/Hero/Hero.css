@@ -1,0 +1,56 @@
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 123px;
+}
+
+
+.hero__title{
+    max-width: 65%;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 96px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 1.03;
+    letter-spacing: -2px;
+    margin-bottom: 45px;
+}
+
+.hero h1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    filter: blur(190px);
+    opacity: 0.8;
+}
+
+
+.hero h1 span {
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+.hero__title p{
+    color: var(--с-subtitle);
+}
+
+.hero__title{
+    margin-bottom: 45px;
+}
+
+.hero button {
+    padding: 16px 18px;
+}
