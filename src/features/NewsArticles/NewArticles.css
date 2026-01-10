@@ -11,15 +11,16 @@
     align-items: stretch;
     border-radius: 16px;
     border: 1px solid rgba(185, 253, 80, 0.46);
+    overflow: hidden;
 }
 
 .article__item .article__data {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:12px;
-    margin: 0 auto;
-    max-width: 288px;
+    gap:18px;
+    padding: 20px 24px;
 }
 
 .article__data span {
@@ -28,15 +29,42 @@
 }
 
 .article__data h3 {
-    font-size: 26px;
+    font-size: clamp(16px, 2.2vw, 24px);
     line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .article__data p {
-    margin-top: 2px;
-    color: #ABABB2;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article__item .article__img {
+    flex: 0 0 40%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
 }
 
 .article__item .article__img img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.article__item .article__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }

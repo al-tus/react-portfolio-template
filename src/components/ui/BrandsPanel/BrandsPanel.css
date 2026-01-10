@@ -35,8 +35,15 @@
 .brands-panel .brands-panel__body{
     display: flex;
     background-color: #222222;
-    padding: 33px 50px;
+    padding: clamp(16px, 2.5vw, 33px) clamp(24px, 4vw, 50px);
     border-radius: 22px;
     justify-content: space-between;
+    align-items: center;
+}
+
+.brand-panel__img{
+    display: flex;
+    justify-content: center;
+    height: 100%;
     align-items: center;
 }

@@ -16,7 +16,7 @@
 
 .accordion__header {
     font-weight: 500;
-    font-size: 18px;
+font-size: clamp(14px, 1.8vw, 18px);
 }
 
 .accordion__item:hover {

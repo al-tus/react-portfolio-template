@@ -10,7 +10,7 @@
 .container-header p {
     max-width: 470px;
     color: #fff;
-    font-size: 18px;
+font-size: clamp(14px, 1.8vw, 18px);
     margin: 25px auto 0;
 }
 

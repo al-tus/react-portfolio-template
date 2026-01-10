@@ -1,90 +1,27 @@
-.pricing {
-    display: flex;
-    gap: 30px;
+.pricing-wrapper {
     margin-top: 112px;
     margin-bottom: 157px;
 }
 
-.pricing .plan__item {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 19px;
-    border: 1px solid rgba(185, 253, 80, 0.46);
-    background: #222222;
-    border-radius: 16px
+.pricing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
-.pricing .plan__item > div {
-    padding: 0 17px;
+.pricing-wrapper .swiper {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    overflow-y: visible;
 }
 
-.pricing .plan__item hr {
-    margin: 34px 0;
-    border-color: rgba(185, 253, 80, 0.46);
+.pricing-wrapper .swiper-slide{
+    transform: translateY(30px);
+    opacity: 0.6;
+    transition: transform 0.5s;
 }
 
-.plan__item .price-subt {
-    color: var(--с-subtitle);
-    font-size: 14px;
-}
-
-.plan__info .plan__name {
-    display: flex;
-    align-items: stretch;
-    gap: 15px;
-    margin-bottom: 32px;
-}
-
-.plan__info .plan__name h3{
-    font-size: 34px;
-    line-height: 1.1;
-    font-weight: 600;
-}
-
-.plan__info .plan__name span {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    font-weight: 300;
-    border-radius: 8px;
-    color: #000;
-}
-
-.plan__info .plan__name span.bg-primary {
-    background-color: var(--primary-color);
-}
-
-.plan__info .plan__name span.bg-white{
-    background-color: #fff;
-}
-
-.plan__price span{
-    font-size: clamp(14px, 2vw, 18px);
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 16px;
-}
-
-.plan_features {
-    flex-grow: 1;
-}
-
-.plan_features ul li{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 20px;
-}
-
-
-.plan_btn {
-    margin-top: 50px;
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-}
-
-.plan_btn button {
-    padding: 16px 0;
+.pricing-wrapper .swiper-slide.swiper-slide-active{
+    transform: translateY(0);
+    opacity: 1;
 }

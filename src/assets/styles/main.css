@@ -31,7 +31,6 @@ html:focus-within {
 }
 
 body {
-    font-size: clamp(14px, 2vw, 18px);
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;

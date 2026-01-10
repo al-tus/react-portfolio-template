@@ -37,7 +37,7 @@ footer a{
 }
 
 .footer__contact .media svg {
-    font-size: 24px;
+    font-size: clamp(14px, 2.5vw, 24px);
 }
 
 .footer__contact .media svg:hover {

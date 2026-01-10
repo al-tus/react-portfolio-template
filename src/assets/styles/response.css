@@ -5,9 +5,27 @@
     .container-fluid{
         margin: 0 20px
     }
+    .pricing {
+        gap: 10px;
+    }
+
+    .pricing .plan__item hr {
+        margin: 2.7vw 0;
+    }
 }
 @media (max-width: 1024px) {
+}
+
+@media (max-width: 768px)  {
+    .news-articles{
+        grid-template-columns: 1fr;
+    }
+    .article__item .article__data {padding: 50px 24px;}
 
 }
-@media (max-width: 768px)  {  }
-@media (max-width: 576px)  {  }
+@media (max-width: 576px)  {
+
+    .info-title__grid {
+        grid-template-columns: 1fr;
+    }
+}

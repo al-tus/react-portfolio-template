@@ -36,13 +36,13 @@
 }
 
 .goodbye__section h2 {
-    font-size: 64px;
+    font-size: clamp(36px, 6vw, 64px);
     line-height: 1;
     letter-spacing: -4px;
 }
 
 .goodbye__section p {
-    font-size: 18px;
+font-size: clamp(14px, 1.8vw, 18px);
     max-width: 300px;
     margin: 29px auto 0;
 }
@@ -56,5 +56,5 @@
 }
 
 .goodbye__section svg {
-    font-size: 18px;
+font-size: clamp(14px, 1.8vw, 18px);
 }

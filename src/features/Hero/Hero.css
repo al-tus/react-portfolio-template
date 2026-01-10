@@ -14,7 +14,7 @@
 
 .hero h1 {
     text-align: center;
-    font-size: 96px;
+    font-size: clamp(48px, 8vw, 96px);
     font-weight: bold;
     text-transform: capitalize;
     line-height: 1.03;
