@@ -4,6 +4,7 @@ header {
     padding: 35px 50px;
     justify-content: space-between;
     margin: 0 auto 50px;
+    align-items: center;
 }
 
 .title-logo span{
@@ -31,4 +32,14 @@ header nav ul {
 
 header button {
     margin-left: 77px;
+    width: max-content;
+}
+
+.header__mobile--btn {
+    color: #fff;
+    font-size: 40px;
+    display: none;
+    z-index: 100;
+    margin: 0;
+    justify-content: end;
 }

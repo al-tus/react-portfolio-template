@@ -1,6 +1,5 @@
 import {useRef} from 'react';
 
-import Header from './features/Header/Header'
 import Hero from "./features/Hero/Hero.tsx";
 import InfoTitles from "./components/ui/InfoTitles/InfoTitles.tsx";
 import Benefits from "./features/Benefits/Benefits.tsx";
@@ -14,6 +13,10 @@ import NewsArticles from "./features/NewsArticles/NewsArticles.tsx";
 import FAQSection from "./features/Faq/Faq.tsx";
 import GoodbyeBlock from "./features/GoodbyeBlock/GoodbyeBlock.tsx";
 import Footer from "./features/Footer/Footer.tsx";
+
+import Header from './features/Header/Header'
+
+
 import type {SectionId} from "./components/ui/NavigarionList/NavList.types.ts";
 
 

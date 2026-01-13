@@ -1,6 +1,8 @@
-import './Hero.css'
+
 import {Button} from "../../components/ui/Button/Button.tsx";
 import {BrandsPanel} from "../../components/ui/BrandsPanel/BrandsPanel.tsx";
+
+import './Hero.css'
 
 const Hero = () => {
     return (

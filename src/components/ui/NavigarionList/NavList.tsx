@@ -1,4 +1,4 @@
-import type {NavItem} from "./NavList.types.ts";
+import type {NavItem, SectionId} from "./NavList.types.ts";
 import type {NavListProps} from "./NavList.types.ts";
 import React from "react";
 
@@ -16,7 +16,7 @@ const NavList: React.FC<NavListProps> = ({ variant, className, onNavigate }) => 
         if (onNavigate) {
             e.preventDefault();
 
-            const section = href.replace('#', '')
+            const section = href.replace('#', '') as SectionId;
             onNavigate(section)
         }
     }

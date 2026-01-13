@@ -1,4 +1,4 @@
-export type SectionId = "process" | "benefits" | "services" | "portfolio" | "faq";
+export type SectionId = 'process' | 'benefits' | 'services' | 'portfolio' | 'faq';;
 
 export interface NavItem {
     label: string;

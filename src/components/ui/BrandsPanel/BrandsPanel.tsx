@@ -1,6 +1,5 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import './BrandsPanel.css'
-import {Swiper, SwiperSlide} from 'swiper/react';
 import {useWindowSize} from "../../../hooks/useWindowSize.tsx";
 
 import circoolesLogo from '../../../assets/images/circooles-logo.svg';
@@ -11,8 +10,46 @@ import quotientLogo from '../../../assets/images/quotient-logo.svg';
 
 const BrandsPanel: React.FC = () => {
     const width = useWindowSize();
-    const isMobile = width <= 1024;
-    const is768 = width <= 768;
+    const shouldAnimate = width <= 768;
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        if (!shouldAnimate) {
+            return;
+        }
+
+        const container = containerRef.current;
+        if (!container) return;
+
+        const speed = 50;
+        let animationId: number;
+        let lastTime = performance.now();
+
+        const animate = (currentTime: number) => {
+            const deltaTime = (currentTime - lastTime) / 1000;
+            lastTime = currentTime;
+
+            setOffset(prevOffset => {
+                const newOffset = prevOffset + speed * deltaTime;
+
+                const scrollWidth = container.scrollWidth / 2;
+
+                if (newOffset >= scrollWidth) {
+                    return newOffset - scrollWidth;
+                }
+
+                return newOffset;
+            });
+
+            animationId = requestAnimationFrame(animate);
+        };
+
+        animationId = requestAnimationFrame(animate);
+
+
+        return () => cancelAnimationFrame(animationId);
+    }, [shouldAnimate]);
 
     const brands = [
         { id: 1, src: circoolesLogo, alt: 'Circooles' },
@@ -30,25 +67,22 @@ const BrandsPanel: React.FC = () => {
                 </p>
             </div>
             <div className="brands-panel__body">
-                {isMobile ? (
-                    <Swiper
-                        slidesPerView={is768 ? 3 : 4}
-                        spaceBetween={30}
-                    >
-                        {brands.map(brand => (
-                            <SwiperSlide>
-                                <div className="brand-panel__img">
-                                    <img key={brand.id} src={brand.src} alt={brand.alt} className="brands-panel__img" />
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                <div className="brands-panel__con"
+                    ref={containerRef}
+                     style={shouldAnimate ? {
+                         transform: `translateX(-${offset}px)`,
+                         willChange: "transform",
+                     }: {}}
+                >
+                    { brands.map(brand => (
+                        <img key={`first-${brand.id}`} src={brand.src} alt={brand.alt} className="brands-panel__img" />
+                    ))}
 
-                ) : (
-                    brands.map(brand => (
-                            <img key={brand.id} src={brand.src} alt={brand.alt} className="brands-panel__img" />
-                    ))
-                )}
+                    {shouldAnimate && brands.map(brand => (
+                        <img key={`last-${brand.id}`} src={brand.src} alt={brand.alt} className="brands-panel__img" />
+                    ))}
+                </div>
+
 
             </div>
         </div>

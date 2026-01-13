@@ -45,3 +45,25 @@ font-size: clamp(14px, 1.8vw, 18px);
     font-weight: 300;
     max-width: 283px;
 }
+
+.benefits .swiper-slide {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(185, 253, 80, 0.6);
+    padding: 30px;
+    height: auto;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.benefits .swiper-slide:before {
+    content: "";
+    background: #B9FD50;
+    background: radial-gradient(circle, rgba(185, 253, 80, 0.3) 56%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    filter: blur(200px);
+    width: 60%;
+    aspect-ratio: 1/1;
+}

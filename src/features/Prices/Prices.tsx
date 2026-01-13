@@ -62,7 +62,6 @@ const plans: PricingPlan[] = [
 
 const Pricing: React.FC = () => {
     const width = useWindowSize();
-    console.log("Current width:", width);
     const isMobile = width <= 1024;
     const is768 = width <= 768;
 
@@ -73,7 +72,7 @@ const Pricing: React.FC = () => {
             {isMobile ? (
                 <Swiper
                     spaceBetween={20}
-                    slidesPerView={is768 ? 1 : 1.9}
+                    slidesPerView={is768 ? 1.2 : 1.9}
                     centeredSlides={true}
                     initialSlide={1}
                     slidesPerGroup={1}

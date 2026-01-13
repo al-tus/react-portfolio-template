@@ -4,11 +4,18 @@ import './Benefits.css'
 import rocketIcon from '../../assets/images/rocket-icon.svg'
 import penIcon from '../../assets/images/pen-icon.svg'
 import revisionIcon from '../../assets/images/revision-icon.svg'
-import benefitArrow from '../../assets/images/benefit-arrow.svg'
 import type {BenefitsItem} from "./Benefits.types.ts";
+import BenefitCard from "../../components/ui/BenefitCard/BenefitCard.tsx";
+
+import {useWindowSize} from "../../hooks/useWindowSize.tsx";
+import {Swiper, SwiperSlide} from "swiper/react";
+
 
 
 const Benefits: React.FC = () => {
+    const width = useWindowSize();
+    const is576 = width <= 576
+
     const benefitsList: BenefitsItem[] = [
         {
             id: 1,
@@ -35,19 +42,24 @@ const Benefits: React.FC = () => {
 
     return (
         <div className="benefits">
-            {benefitsList.map((benefit) => (
-                <div className='benefits__item' key={benefit.id}>
-                    <div className='benefits__icon-wrapper'>
-                        <div className="benefits__icon">
-                            <img src={benefit.icon} alt={benefit.alt} />
-                        </div>
-                        <img className='benefit__arrow' src={benefitArrow} alt="Benefit Arrow"/>
-                    </div>
+            {is576 ? (
+                <Swiper
+                    spaceBetween={20}
+                    slidesPerView={ 1.1}
+                >
+                    {benefitsList.map((benefit, index) => (
+                        <SwiperSlide>
+                            <BenefitCard benefit={benefit} key={index}/>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            ) : (
+                benefitsList.map((benefit, index) => (
+                        <BenefitCard benefit={benefit} key={index}/>
+                ))
+            )}
 
-                    <h4>{benefit.title}</h4>
-                    <p>{benefit.description}</p>
-                </div>
-            ))}
+
         </div>
     )
 }
