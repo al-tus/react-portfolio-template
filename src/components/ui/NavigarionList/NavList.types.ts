@@ -1,4 +1,5 @@
-export type SectionId = 'process' | 'benefits' | 'services' | 'portfolio' | 'faq';;
+export type SectionId = 'process' | 'benefits' | 'services' | 'portfolio' | 'faq';
+
 
 export interface NavItem {
     label: string;
@@ -6,7 +7,8 @@ export interface NavItem {
 }
 
 export interface NavListProps {
-    variant: 'header' | 'footer';
-    className?: string;
-    onNavigate?: (section: SectionId) => void;
+    variant: 'header' | 'footer',
+    className?: string,
+    onNavigate?: (section: SectionId) => void,
+    isOpen?: boolean
 }

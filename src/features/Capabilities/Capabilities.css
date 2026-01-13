@@ -11,5 +11,5 @@
 .capabilities__tales button{
     padding:11px  35px;
     font-weight: 300;
-    font-size: 17px;
+    font-size: clamp(14px, 2vw, 17px);
 }

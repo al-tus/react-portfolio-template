@@ -10,7 +10,7 @@ const navItems: NavItem[] = [
     {label: 'FAQ', href: '#faq'},
 ]
 
-const NavList: React.FC<NavListProps> = ({ variant, className, onNavigate }) => {
+const NavList: React.FC<NavListProps> = ({variant, className, onNavigate}) => {
 
     const handleClick = (e: React.MouseEvent, href: string) => {
         if (onNavigate) {

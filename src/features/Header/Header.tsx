@@ -37,6 +37,11 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
         };
     }, [isOpen])
 
+    const handleNavigate = (section: SectionId) => {
+        onNavigate(section)
+        setIsOpen(false)
+    }
+
 
     return(
         <header className={isOpen ? 'is-open' : ''}>
@@ -48,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
 
             <nav className='header__nav'>
-                <NavList variant='header' onNavigate={onNavigate}/>
+                <NavList variant='header' onNavigate={handleNavigate}/>
 
                 <Button variant='primary'>
                     Get Started
