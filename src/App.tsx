@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import {useEffect, useRef} from 'react';
 
 import Hero from "./features/Hero/Hero.tsx";
 import InfoTitles from "./components/ui/InfoTitles/InfoTitles.tsx";
@@ -15,6 +15,9 @@ import GoodbyeBlock from "./features/GoodbyeBlock/GoodbyeBlock.tsx";
 import Footer from "./features/Footer/Footer.tsx";
 
 import Header from './features/Header/Header'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 import type {SectionId} from "./components/ui/NavigarionList/NavList.types.ts";
@@ -38,6 +41,13 @@ function App() {
 
         map[section].current?.scrollIntoView({ behavior: "smooth" });
     }
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        })
+    })
 
   return (
     <>

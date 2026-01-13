@@ -4,7 +4,7 @@ import './GoodbyeBlock.css'
 
 const GoodbyeBlock = () => {
     return (
-        <div className="goodbye__block">
+        <div className="goodbye__block" data-aos='fade-in'>
             <div className="container-fluid">
                 <div className="goodbye__section">
                     <h2>

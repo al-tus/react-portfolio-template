@@ -60,9 +60,9 @@ const BrandsPanel: React.FC = () => {
     ]
 
     return (
-        <div className="brands-panel">
+        <div className="brands-panel" data-aos="fade-in">
             <div className="brands-panel__header">
-                <p>
+                <p  data-aos="fade-in" >
                     TRUSTED BY AMAZING BRANDS
                 </p>
             </div>
@@ -75,7 +75,8 @@ const BrandsPanel: React.FC = () => {
                      }: {}}
                 >
                     { brands.map(brand => (
-                        <img key={`first-${brand.id}`} src={brand.src} alt={brand.alt} className="brands-panel__img" />
+                        <img key={`first-${brand.id}`} src={brand.src} alt={brand.alt} className="brands-panel__img"
+                             data-aos="fade-right" data-aos-delay={brand.id * 100}/>
                     ))}
 
                     {shouldAnimate && brands.map(brand => (

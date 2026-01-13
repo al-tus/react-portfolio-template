@@ -9,14 +9,14 @@ const Hero = () => {
         <div className="container-fluid">
             <div className="hero">
                 <div className="hero__title">
-                    <h1>
+                    <h1 data-aos="fade-up">
                         Bringing your
                         dream into <span>reality</span>
                     </h1>
-                    <p>We increase revenue and ensure sustainable long-term growth <br />
+                    <p data-aos="fade-up" data-aos-delay="200" >We increase revenue and ensure sustainable long-term growth <br />
                         for your business through powerful Webflow websites.</p>
                 </div>
-                <Button variant='primary'>
+                <Button variant='primary' >
                     Book A Meeting
                 </Button>
 

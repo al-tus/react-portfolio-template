@@ -4,7 +4,7 @@ import benefitArrow from '../../../assets/images/benefit-arrow.svg'
 
  const BenefitCard: React.FC<{benefit: BenefitsItem}> = ({benefit}) => {
     return (
-        <div className='benefits__item' key={benefit.id}>
+        <div className='benefits__item' key={benefit.id} data-aos="fade-right" data-aos-delay={benefit.id * 100}>
             <div className='benefits__icon-wrapper'>
                 <div className="benefits__icon">
                     <img src={benefit.icon} alt={benefit.alt} />

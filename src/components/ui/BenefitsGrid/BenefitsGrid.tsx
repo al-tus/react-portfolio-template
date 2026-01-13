@@ -64,7 +64,7 @@ const benefits: BenefitsGridTypes[] = [
 
 const BenefitsGrid: React.FC = () => {
     return (
-        <div className='benefits__grid'>
+        <div className='benefits__grid' data-aos="fade-in">
             {benefits.map((benefit, index) => (
                 <div key={index} className='benefits__grid-item'>
                     <img src={benefit.icon} alt='grid-icon'/>

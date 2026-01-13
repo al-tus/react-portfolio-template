@@ -56,7 +56,7 @@ const NewsArticles: React.FC = () => {
     return (
         <div className='news-articles'>
             {articles.map((article, index) => (
-                <div key={index} className='article__item'>
+                <div key={index} className='article__item' data-aos='fade-right'>
                     <div className="article__img">
                         <img src={article.imageUrl} alt={article.title} />
                     </div>

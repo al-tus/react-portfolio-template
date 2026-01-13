@@ -11,11 +11,18 @@ export interface PricingPlan {
     subtext: string;
     features: string[];
     highlightFeatureIndex?: number;
+    delay?: number;
 }
 
-const PlanCard: React.FC<{ plan: PricingPlan }> = ({ plan }) => {
+
+interface PlanCardProps {
+    plan: PricingPlan;
+    delay?: number;
+}
+
+const PlanCard: React.FC<PlanCardProps> = ({ plan, delay = 0 }) => {
     return (
-        <div className="plan__item">
+        <div className="plan__item" data-aos="fade-right" data-aos-delay={delay}>
             <div className="plan__info">
                 <div className="plan__name">
                     <h3>{plan.title}</h3>

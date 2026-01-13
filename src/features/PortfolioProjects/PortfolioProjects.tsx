@@ -42,10 +42,13 @@ const PortfolioProjects: React.FC = () => {
 
                 <div className={'portfolio__grid'}>
                     {chunks.map((chunk, blockIdx) => (
-                        <div key={blockIdx} className={`portfolio__block portfolio__block--${blockIdx}`}>
+
+                        <div key={blockIdx} className={`portfolio__block portfolio__block--${blockIdx + 1}` }
+                            data-aos={`fade-${blockIdx % 2 === 0 ? 'up' : 'down'}`} >
                             {chunk.map((src, imgIdx) => (
                                 <img key={imgIdx} src={src} alt="" />
                             ))}
+
                         </div>
                     ))}
                 </div>

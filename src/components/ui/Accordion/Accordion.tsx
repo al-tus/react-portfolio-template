@@ -28,13 +28,15 @@ const Accordion: React.FC<AccordionProps> = ({items, allowMultiple = false}) => 
 
     return (
         <div className="accordion-container">
-            {items.map((item) => {
+            {items.map((item, index) => {
                 const isOpen = openIds.includes(item.id);
 
                 return (
                     <div
                         key={item.id}
                         className="accordion__item"
+                        data-aos='fade-right'
+                        data-aos-delay={index * 200}
                     >
                         <button
                             onClick={() => toggleItem(item.id)}

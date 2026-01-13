@@ -92,7 +92,7 @@ const Pricing: React.FC = () => {
             ) : (
                 <div className="pricing">
                     {plans.map((plan, index) => (
-                        <PlanCard key={index} plan={plan} />
+                        <PlanCard key={index} plan={plan} delay={index * 200}/>
                     ))}
                 </div>
             )}

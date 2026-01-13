@@ -16,7 +16,7 @@ const Footer :React.FC<FooterProps> = ({onNavigate}) => {
             <div className="container-fluid">
                 <div className="container">
                     <div className="footer__top">
-                        <div>
+                        <div data-aos='fade-right'>
                             <h1 className='title-logo'>
                                 <a href="#">
                                     Kro<span>nix</span>
@@ -26,7 +26,7 @@ const Footer :React.FC<FooterProps> = ({onNavigate}) => {
                                 Kornix - the leading digital agency based in the UK, working with top-tier clients, from start-ups to enterprises.
                             </p>
                         </div>
-                        <div className="footer__contact">
+                        <div className="footer__contact" data-aos='fade-right'>
                             <span><IoMailOutline />info@kronix.com</span>
                             <span><FaPhone />(001) 1231 3435</span>
                             <div className="media">
@@ -42,10 +42,10 @@ const Footer :React.FC<FooterProps> = ({onNavigate}) => {
                 <hr/>
 
                 <div className="container">
-                    <div className="footer__bottom">
+                    <div className="footer__bottom" data-aos='fade-in'>
                         <NavList variant='footer' onNavigate={onNavigate}/>
 
-                        <p>© 2026 al'tus - All Right Reserved</p>
+                        <p >© 2026 al'tus - All Right Reserved</p>
                     </div>
 
                 </div>
