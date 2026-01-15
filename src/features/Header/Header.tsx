@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
 
     return(
-        <header className={isOpen ? 'is-open' : ''} data-aos="fade-in">
+        <header className={isOpen ? 'is-open' : ''} data-aos={mobileNav ? '' : 'fade-in'}>
             <h1 className='title-logo'>
                 <a href="#">
                     Kro<span>nix</span>

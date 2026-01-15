@@ -134,7 +134,9 @@
     }
 
     header.is-open {
+        position: relative;
         background-color: var(--primary-color-dark);
+        z-index: 99;
     }
 
     .hero__title {
